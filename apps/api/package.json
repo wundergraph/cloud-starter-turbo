@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "wunderctl up --debug --wundergraph-dir .",
-    "generate": "wunderctl generate up --debug --wundergraph-dir .",
+    "build": "wunderctl generate --debug --wundergraph-dir .",
     "check": "tsc --noEmit"
   },
   "author": "",
