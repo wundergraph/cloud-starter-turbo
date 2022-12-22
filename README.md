@@ -6,7 +6,6 @@ A simple starter that consumes the [Countries API](https://countries.trevorblade
 
 ```shell
 npm install
-npm run generate 
 npm run build
 npm run dev
 ```

@@ -3,5 +3,8 @@
   "version": "0.0.0",
   "main": "client.ts",
   "types": "client.ts",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "api": "^1.0.0"
+  }
 }

@@ -3,16 +3,16 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".svelte-kit/**", ".vercel/**"]
+      "outputs": [".svelte-kit/**", ".vercel/**", "generated-wundergraph/**"]
+    },
+    "web#build": {
+      "dependsOn": ["^api#build"],
+      "outputs": [".svelte-kit/**"]
     },
     "lint": {
       "outputs": []
     },
     "dev": {
-      "cache": false
-    },
-    "generate": {
-      "outputs": ["generated-wundergraph/**"],
       "cache": false
     }
   },
