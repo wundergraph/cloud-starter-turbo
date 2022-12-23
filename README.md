@@ -1,6 +1,6 @@
-# Simple starter for WunderGraph Cloud
+# WunderGraph Cloud Starter + Turborepo
 
-A simple starter that consumes the [Countries API](https://countries.trevorblades.com/).
+This starter combines [WunderGraph](https://wundergraph.com/) Cloud with [Turborepo](https://github.com/vercel/turbo) to create an optimized monorepo experience for your WunderGraph application.
 
 ### Getting started locally
 
@@ -10,13 +10,11 @@ npm run build
 npm run dev
 ```
 
-Get Countries
+Fetch all `Countries` from your WunderGraph.
 
 ```shell
-curl -X GET http://localhost:3000/
+curl -X GET http://localhost:3000/operations/Countries
 ```
-
----
 
 ### Deploy to WunderGraph Cloud
 
@@ -26,7 +24,7 @@ curl -X GET http://localhost:3000/
 4. Import the forked repo
 5. Deploy the project
 
-Try it out (replace `YOUR_PROJECT_ID` with your project id):
+Try it out (replace `YOUR_PROJECT_NAME` with your project name):
 
 ```shell
 curl -X GET https://{YOUR_PROJECT_NAME}.wundergraph.dev/operations/Countries
@@ -37,13 +35,7 @@ curl -X GET https://{YOUR_PROJECT_NAME}.wundergraph.dev/operations/Countries
 1. Make changes to the `main` branch, e.g. change the query in `apps/api/operations/Countries.graphql`
 2. Commit and push the changes
 
-See your changes live in less than 50 seconds.
-
-```shell
-curl -X GET https://{YOUR_PROJECT_NAME}.wundergraph.dev/operations/Countries
-```
-
----
+See your changes live in less than a minute. If you don't make changes that will affect the WunderGraph build, the build will be fetched from the cache. 
 
 ### Learn More
 

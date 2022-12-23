@@ -3,7 +3,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".svelte-kit/**", ".vercel/**", "generated-wundergraph/**"]
+      "outputs": [".svelte-kit/**", ".vercel/**", "generated-wundergraph/**", "generated/**"]
     },
     "web#build": {
       "dependsOn": ["^api#build"],
