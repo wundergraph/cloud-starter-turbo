@@ -7,9 +7,7 @@ export const load: Load = async () => {
   const response = await client.query({
     operationName: 'Countries',
     input: {
-      filter: {
-        continent: { eq: 'SA' }
-      }
+      code: 'DE',
     }
   });
 

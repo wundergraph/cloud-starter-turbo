@@ -13,7 +13,7 @@ npm run dev
 Fetch all `Countries` from your WunderGraph.
 
 ```shell
-curl -X GET http://localhost:3000/operations/Countries
+curl -X GET http://localhost:3000/operations/Countries?code=DE
 ```
 
 ### Deploy to WunderGraph Cloud
