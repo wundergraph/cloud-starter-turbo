@@ -27,7 +27,7 @@ curl -X GET http://localhost:3000/operations/Countries?code=DE
 Try it out (replace `YOUR_PROJECT_NAME` with your project name):
 
 ```shell
-curl -X GET https://{YOUR_PROJECT_NAME}.wundergraph.dev/operations/Countries
+curl -X GET https://{YOUR_PROJECT_NAME}.wundergraph.dev/operations/Countries?code=DE
 ```
 
 ### Make changes
