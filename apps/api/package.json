@@ -9,7 +9,7 @@
   },
   "author": "",
   "dependencies": {
-    "@wundergraph/sdk": "^0.130.2"
+    "@wundergraph/sdk": "^0.133.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.15",
