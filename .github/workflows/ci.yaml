@@ -12,32 +12,13 @@ jobs:
   build_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-      - uses: pnpm/action-setup@v2.2.4
-        id: pnpm-install
-        with:
-          version: 7.32.0
-          run_install: false
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 'lts/*'
+        cache: 'npm'
 
-      - name: Get pnpm store directory
-        shell: bash
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+    - run: npm ci
 
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: setup pnpm config registry
-        run: pnpm config set registry https://registry.npmjs.org
-        shell: bash
-
-      - run: pnpm i
-
-      - run: pnpm build
+    - run: npm run build
