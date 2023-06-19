@@ -20,14 +20,6 @@ configureWunderGraphApplication({
   operations,
   codeGenerators: [
     {
-      templates: [
-        // use all the typescript react templates to generate a client
-        ...templates.typescript.all,
-        templates.typescript.operations,
-        templates.typescript.linkBuilder
-      ]
-    },
-    {
       templates: [templates.typescript.client],
       path: '../../packages/generated-wundergraph'
     }
@@ -45,9 +37,6 @@ configureWunderGraphApplication({
             'http://127.0.0.1:3000/',
             new EnvironmentVariable('WG_ALLOWED_ORIGIN')
           ]
-  },
-  dotGraphQLConfig: {
-    hasDotWunderGraphDirectory: false
   },
   security: {
     enableGraphQLEndpoint:
